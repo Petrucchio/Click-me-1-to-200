@@ -1,0 +1,23 @@
+﻿@model Click_me_1_to_200.Models.Number
+@{
+    ViewData["Title"] = "Home Page";
+}
+<form asp-action="Create">
+    <div class="value-box">
+        <div class="value-content">
+            <label asp-for="valormin">Valor Minimo</label>
+            <input asp-for="valormin" value="1" type="number" min="1" max="10" >
+            
+    </div>
+        <div class="value-content">
+            <label asp-for="valormax">Valor Máximo</label>
+            <input asp-for="valormax" value="200" type="number" min="11" max="200" >
+            
+    </div>
+        <button class="testbutton" type="submit" value="Create">
+        </button>
+    </div>
+
+    
+
+</form>

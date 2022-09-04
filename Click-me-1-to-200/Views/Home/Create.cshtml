@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="value-box">
+        <div class="value-content DivWithScroll">
+            <ul class="w3-ul w3-card-4 w3-hoverable">
+            @{
+                StreamReader csv = new StreamReader(@"C:\Users\vitux\source\repos\Click-me-1-to-200\Click-me-1-to-200\Data\numeros.csv");
+                string linha;
+                while ((linha = csv.ReadLine()) != null)
+                {
+                                <li>
+                                <label>@linha</label>
+                                </li>
+                }
+            csv.Close();
+            }
+        </ul>
+    </div>
+</div>
